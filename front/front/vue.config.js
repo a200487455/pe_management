@@ -4,6 +4,7 @@ module.exports = {
   outputDir: 'dist',
   devServer: {
     open: true,
+    //port: 8081, //前端监听端口
     proxy: {
           '/springboot87gha':{
               target:'http://127.0.0.1:8081/',  //跨域的域名

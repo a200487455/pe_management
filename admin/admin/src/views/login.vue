@@ -3,7 +3,7 @@
     <div class="container" :style='{"minHeight":"100vh","alignItems":"center","background":"url(http://codegen.caihongy.cn/20220718/fc966bb66236436093833a021b5a5511.png)","display":"flex","width":"100%","backgroundSize":"cover","backgroundPosition":"center center","backgroundRepeat":"no-repeat","justifyContent":"center"}'>
 
       <el-form :style='{"width":"1400px","padding":"40px 20px 20px","margin":"50px 0 0","position":"relative","borderRadius":"10px","height":"700px"}'>
-        <div v-if="true" :style='{"padding":"0 150px","margin":"30px 0 180px 0","color":"rgba(0, 0, 0, 1)","textAlign":"center","width":"100%","lineHeight":"44px","fontSize":"30px","fontWeight":"600","height":"auto"}' class="title-container">宠物领养系统登录</div>
+        <div v-if="true" :style='{"padding":"0 150px","margin":"30px 0 180px 0","color":"rgba(0, 0, 0, 1)","textAlign":"center","width":"100%","lineHeight":"44px","fontSize":"30px","fontWeight":"600","height":"auto"}' class="title-container">新创电子销售系统</div>
         <div v-if="loginType==1" class="list-item" :style='{"width":"38%","margin":"0 0 25px 5%","alignItems":"center","display":"flex"}'>
           <div v-if="false" class="lable" :style='{"width":"64px","lineHeight":"44px","fontSize":"14px","color":"rgba(64, 158, 255, 1)"}'>用户名</div>
           <input :style='{"border":"0px solid rgba(64, 158, 255, 1)","padding":"0 20px","boxShadow":"0px 4px 10px 0px rgba(0,0,0,0.3020)","color":"#000","outlineOffset":"0px","borderRadius":"40px","width":"100%","fontSize":"18px","height":"60px"}' placeholder="请输入用户名" name="username" type="text" v-model="rulesForm.username">
