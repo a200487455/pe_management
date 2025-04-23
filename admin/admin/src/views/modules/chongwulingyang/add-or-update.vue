@@ -9,21 +9,21 @@
 			label-width="120px"
 		>
 			<template >
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="宠物名称" prop="chongwumingcheng">
-					<el-input v-model="ruleForm.chongwumingcheng" placeholder="宠物名称" clearable  :readonly="ro.chongwumingcheng"></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="商品名称" prop="chongwumingcheng">
+					<el-input v-model="ruleForm.chongwumingcheng" placeholder="商品名称" clearable  :readonly="ro.chongwumingcheng"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="宠物名称" prop="chongwumingcheng">
-					<el-input v-model="ruleForm.chongwumingcheng" placeholder="宠物名称" readonly></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="商品名称" prop="chongwumingcheng">
+					<el-input v-model="ruleForm.chongwumingcheng" placeholder="商品名称" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="宠物分类" prop="chongwufenlei">
-					<el-input v-model="ruleForm.chongwufenlei" placeholder="宠物分类" clearable  :readonly="ro.chongwufenlei"></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="电子元件分类" prop="chongwufenlei">
+					<el-input v-model="ruleForm.chongwufenlei" placeholder="电子元件分类" clearable  :readonly="ro.chongwufenlei"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="宠物分类" prop="chongwufenlei">
-					<el-input v-model="ruleForm.chongwufenlei" placeholder="宠物分类" readonly></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="电子元件分类" prop="chongwufenlei">
+					<el-input v-model="ruleForm.chongwufenlei" placeholder="电子元件分类" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="upload" v-if="type!='info' && !ro.chongwutupian" label="宠物图片" prop="chongwutupian">
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="upload" v-if="type!='info' && !ro.chongwutupian" label="商品图片" prop="chongwutupian">
 					<file-upload
-						tip="点击上传宠物图片"
+						tip="点击上传商品图片"
 						action="file/upload"
 						:limit="3"
 						:multiple="true"
@@ -31,33 +31,33 @@
 						@change="chongwutupianUploadChange"
 					></file-upload>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="upload" v-else-if="ruleForm.chongwutupian" label="宠物图片" prop="chongwutupian">
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="upload" v-else-if="ruleForm.chongwutupian" label="商品图片" prop="chongwutupian">
 					<img v-if="ruleForm.chongwutupian.substring(0,4)=='http'" class="upload-img" style="margin-right:20px;" v-bind:key="index" :src="ruleForm.chongwutupian.split(',')[0]" width="100" height="100">
 					<img v-else class="upload-img" style="margin-right:20px;" v-bind:key="index" v-for="(item,index) in ruleForm.chongwutupian.split(',')" :src="$base.url+item" width="100" height="100">
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="宠物性别" prop="chongwuxingbie">
-					<el-input v-model="ruleForm.chongwuxingbie" placeholder="宠物性别" clearable  :readonly="ro.chongwuxingbie"></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="是否缺货" prop="chongwuxingbie">
+					<el-input v-model="ruleForm.chongwuxingbie" placeholder="是否缺货" clearable  :readonly="ro.chongwuxingbie"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="宠物性别" prop="chongwuxingbie">
-					<el-input v-model="ruleForm.chongwuxingbie" placeholder="宠物性别" readonly></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="是否缺货" prop="chongwuxingbie">
+					<el-input v-model="ruleForm.chongwuxingbie" placeholder="是否缺货" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="接种疫苗" prop="jiezhongyimiao">
-					<el-input v-model="ruleForm.jiezhongyimiao" placeholder="接种疫苗" clearable  :readonly="ro.jiezhongyimiao"></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="支持售后" prop="jiezhongyimiao">
+					<el-input v-model="ruleForm.jiezhongyimiao" placeholder="支持售后" clearable  :readonly="ro.jiezhongyimiao"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="接种疫苗" prop="jiezhongyimiao">
-					<el-input v-model="ruleForm.jiezhongyimiao" placeholder="接种疫苗" readonly></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="支持售后" prop="jiezhongyimiao">
+					<el-input v-model="ruleForm.jiezhongyimiao" placeholder="支持售后" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="宠物性情" prop="chongwuxingqing">
-					<el-input v-model="ruleForm.chongwuxingqing" placeholder="宠物性情" clearable  :readonly="ro.chongwuxingqing"></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="是否限购" prop="chongwuxingqing">
+					<el-input v-model="ruleForm.chongwuxingqing" placeholder="是否限购" clearable  :readonly="ro.chongwuxingqing"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="宠物性情" prop="chongwuxingqing">
-					<el-input v-model="ruleForm.chongwuxingqing" placeholder="宠物性情" readonly></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="是否限购" prop="chongwuxingqing">
+					<el-input v-model="ruleForm.chongwuxingqing" placeholder="是否限购" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="领养要求" prop="lingyangyaoqiu">
-					<el-input v-model="ruleForm.lingyangyaoqiu" placeholder="领养要求" clearable  :readonly="ro.lingyangyaoqiu"></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="起购要求" prop="lingyangyaoqiu">
+					<el-input v-model="ruleForm.lingyangyaoqiu" placeholder="起购要求" clearable  :readonly="ro.lingyangyaoqiu"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="领养要求" prop="lingyangyaoqiu">
-					<el-input v-model="ruleForm.lingyangyaoqiu" placeholder="领养要求" readonly></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="起购要求" prop="lingyangyaoqiu">
+					<el-input v-model="ruleForm.lingyangyaoqiu" placeholder="起购要求" readonly></el-input>
 				</el-form-item>
 				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="备注" prop="beizhu">
 					<el-input v-model="ruleForm.beizhu" placeholder="备注" clearable  :readonly="ro.beizhu"></el-input>
@@ -71,11 +71,11 @@
 				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="发布日期" prop="faburiqi">
 					<el-input v-model="ruleForm.faburiqi" placeholder="发布日期" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="领养申请" prop="lingyangshenqing">
-					<el-input v-model="ruleForm.lingyangshenqing" placeholder="领养申请" clearable  :readonly="ro.lingyangshenqing"></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="购买申请" prop="lingyangshenqing">
+					<el-input v-model="ruleForm.lingyangshenqing" placeholder="购买申请" clearable  :readonly="ro.lingyangshenqing"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="领养申请" prop="lingyangshenqing">
-					<el-input v-model="ruleForm.lingyangshenqing" placeholder="领养申请" readonly></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="购买申请" prop="lingyangshenqing">
+					<el-input v-model="ruleForm.lingyangshenqing" placeholder="购买申请" readonly></el-input>
 				</el-form-item>
 				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="申请备注" prop="shenqingbeizhu">
 					<el-input v-model="ruleForm.shenqingbeizhu" placeholder="申请备注" clearable  :readonly="ro.shenqingbeizhu"></el-input>
@@ -114,7 +114,7 @@
 					<el-input v-model="ruleForm.shouji" placeholder="手机" readonly></el-input>
 				</el-form-item>
 			</template>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-if="type!='info'"  label="宠物详情" prop="chongwuxiangqing">
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-if="type!='info'"  label="商品详情" prop="chongwuxiangqing">
 					<editor 
 						style="min-width: 200px; max-width: 600px;"
 						v-model="ruleForm.chongwuxiangqing" 
@@ -122,9 +122,7 @@
 						action="file/upload">
 					</editor>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else-if="ruleForm.chongwuxiangqing" label="宠物详情" prop="chongwuxiangqing">
-                    <span :style='{"fontSize":"14px","lineHeight":"40px","color":"#777","fontWeight":"500","display":"inline-block"}' v-html="ruleForm.chongwuxiangqing"></span>
-                </el-form-item>
+
 			<el-form-item :style='{"padding":"0","margin":"0"}' class="btn">
 				<el-button :style='{"border":"0","cursor":"pointer","padding":"0","margin":"0 20px 0 0","outline":"none","color":"#333","borderRadius":"4px","background":"linear-gradient(180deg, #DDE2FC 0%, #FCF6E5 100%)","width":"128px","lineHeight":"40px","fontSize":"14px","height":"40px"}'  v-if="type!='info'" type="primary" class="btn-success" @click="onSubmit">提交</el-button>
 				<el-button :style='{"border":"1px solid rgba(218, 224, 255, 1)","cursor":"pointer","padding":"0","margin":"0","outline":"none","color":"#777","borderRadius":"4px","background":"rgba(255, 255, 255, 1)","width":"128px","lineHeight":"40px","fontSize":"14px","height":"40px"}' v-if="type!='info'" class="btn-close" @click="back()">取消</el-button>

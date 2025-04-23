@@ -74,7 +74,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '宠物用品'
+            name: '直售商品信息'
           }
         ],
         formSearch: {

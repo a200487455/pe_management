@@ -9,14 +9,14 @@
 			label-width="120px"
 		>
 			<template >
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="宠物名称" prop="chongwumingcheng">
-					<el-input v-model="ruleForm.chongwumingcheng" placeholder="宠物名称" clearable  :readonly="ro.chongwumingcheng"></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="商品名称" prop="chongwumingcheng">
+					<el-input v-model="ruleForm.chongwumingcheng" placeholder="商品名称" clearable  :readonly="ro.chongwumingcheng"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="宠物名称" prop="chongwumingcheng">
-					<el-input v-model="ruleForm.chongwumingcheng" placeholder="宠物名称" readonly></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="商品名称" prop="chongwumingcheng">
+					<el-input v-model="ruleForm.chongwumingcheng" placeholder="商品名称" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="select" v-if="type!='info'"  label="宠物分类" prop="chongwufenlei">
-					<el-select :disabled="ro.chongwufenlei" v-model="ruleForm.chongwufenlei" placeholder="请选择宠物分类" >
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="select" v-if="type!='info'"  label="电子元件分类" prop="chongwufenlei">
+					<el-select :disabled="ro.chongwufenlei" v-model="ruleForm.chongwufenlei" placeholder="请选择电子元件分类" >
 						<el-option
 							v-for="(item,index) in chongwufenleiOptions"
 							v-bind:key="index"
@@ -25,13 +25,13 @@
 						</el-option>
 					</el-select>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="宠物分类" prop="chongwufenlei">
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="电子元件分类" prop="chongwufenlei">
 					<el-input v-model="ruleForm.chongwufenlei"
-						placeholder="宠物分类" readonly></el-input>
+						placeholder="电子元件分类" readonly></el-input>
 				</el-form-item>
 				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="upload" v-if="type!='info' && !ro.chongwutupian" label="宠物图片" prop="chongwutupian">
 					<file-upload
-						tip="点击上传宠物图片"
+						tip="点击上传商品图片"
 						action="file/upload"
 						:limit="3"
 						:multiple="true"
@@ -43,8 +43,8 @@
 					<img v-if="ruleForm.chongwutupian.substring(0,4)=='http'" class="upload-img" style="margin-right:20px;" v-bind:key="index" :src="ruleForm.chongwutupian.split(',')[0]" width="100" height="100">
 					<img v-else class="upload-img" style="margin-right:20px;" v-bind:key="index" v-for="(item,index) in ruleForm.chongwutupian.split(',')" :src="$base.url+item" width="100" height="100">
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="select" v-if="type!='info'"  label="宠物性别" prop="chongwuxingbie">
-					<el-select :disabled="ro.chongwuxingbie" v-model="ruleForm.chongwuxingbie" placeholder="请选择宠物性别" >
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="select" v-if="type!='info'"  label="是否缺货" prop="chongwuxingbie">
+					<el-select :disabled="ro.chongwuxingbie" v-model="ruleForm.chongwuxingbie" placeholder="请选择是否缺货" >
 						<el-option
 							v-for="(item,index) in chongwuxingbieOptions"
 							v-bind:key="index"
@@ -53,12 +53,12 @@
 						</el-option>
 					</el-select>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="宠物性别" prop="chongwuxingbie">
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="是否缺货" prop="chongwuxingbie">
 					<el-input v-model="ruleForm.chongwuxingbie"
-						placeholder="宠物性别" readonly></el-input>
+						placeholder="是否缺货" readonly></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="select" v-if="type!='info'"  label="接种疫苗" prop="jiezhongyimiao">
-					<el-select :disabled="ro.jiezhongyimiao" v-model="ruleForm.jiezhongyimiao" placeholder="请选择接种疫苗" >
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="select" v-if="type!='info'"  label="支持售后" prop="jiezhongyimiao">
+					<el-select :disabled="ro.jiezhongyimiao" v-model="ruleForm.jiezhongyimiao" placeholder="请选择支持售后" >
 						<el-option
 							v-for="(item,index) in jiezhongyimiaoOptions"
 							v-bind:key="index"
@@ -67,9 +67,9 @@
 						</el-option>
 					</el-select>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="接种疫苗" prop="jiezhongyimiao">
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="支持售后" prop="jiezhongyimiao">
 					<el-input v-model="ruleForm.jiezhongyimiao"
-						placeholder="接种疫苗" readonly></el-input>
+						placeholder="支持售后" readonly></el-input>
 				</el-form-item>
 				<!-- <el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="宠物性情" prop="chongwuxingqing">
 					<el-input v-model="ruleForm.chongwuxingqing" placeholder="宠物性情" clearable  :readonly="ro.chongwuxingqing"></el-input>
@@ -396,9 +396,9 @@ export default {
 					this.$message.error(data.msg);
 				}
             });
-            this.chongwuxingbieOptions = "公,母".split(',')
+            this.chongwuxingbieOptions = "是,否".split(',')
             this.jiezhongyimiaoOptions = "是,否".split(',')
-            this.zhuangtaiOptions = "已领养,未领养".split(',')
+            this.zhuangtaiOptions = "余裕,紧张,缺货".split(',')
 			
 		},
     // 多级联动参数

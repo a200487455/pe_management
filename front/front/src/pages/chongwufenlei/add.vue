@@ -7,9 +7,9 @@
       :rules="rules"
       label-width="80px"
     >
-          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="宠物类型" prop="chongwuleixing">
+          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="电子元件类型" prop="chongwuleixing">
             <el-input v-model="ruleForm.chongwuleixing" 
-                placeholder="宠物类型" clearable ></el-input>
+                placeholder="电子元件类型" clearable ></el-input>
           </el-form-item>
 
       <el-form-item :style='{"padding":"0","margin":"20px 0 20px 0"}'>

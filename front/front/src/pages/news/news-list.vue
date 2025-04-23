@@ -65,7 +65,7 @@
         baseUrl: this.$config.baseUrl,
         breadcrumbItem: [
           {
-            name: '宠物资讯'
+            name: '公告推送'
           }
         ],
         newsList: [],

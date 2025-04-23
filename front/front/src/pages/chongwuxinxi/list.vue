@@ -12,12 +12,12 @@
 	
     <el-form :inline="true" :model="formSearch" class="list-form-pv" :style='{"padding":"20px 10px","margin":"0px auto 0","borderColor":"#00adb5","alignItems":"center","display":"flex","borderRadius":"0px","flexWrap":"wrap","background":"#f5f5f5","borderWidth":"0px 0 0px 0","width":"100%","borderStyle":"dashed","height":"auto","order":"2"}'>
       <!-- <el-form-item :style='{"alignItems":"center","margin":"0 4px 0 0","display":"flex"}'>
-	    <div class="lable" v-if="true" :style='{"width":"auto","padding":"0 10px","lineHeight":"42px","display":"inline-block"}'>宠物名称</div>
-        <el-input v-model="formSearch.chongwumingcheng" placeholder="宠物名称" clearable></el-input>
+	    <div class="lable" v-if="true" :style='{"width":"auto","padding":"0 10px","lineHeight":"42px","display":"inline-block"}'>商品名称</div>
+        <el-input v-model="formSearch.chongwumingcheng" placeholder="商品名称" clearable></el-input>
       </el-form-item> -->
       <el-form-item :style='{"alignItems":"center","margin":"0 4px 0 0","display":"flex"}'>
-		<div class="lable" v-if="true" :style='{"width":"auto","padding":"0 10px","lineHeight":"42px","display":"inline-block"}'>宠物分类</div>
-        <el-select v-model="formSearch.chongwufenlei" placeholder="请选择宠物分类" :clearable="true">
+		<div class="lable" v-if="true" :style='{"width":"auto","padding":"0 10px","lineHeight":"42px","display":"inline-block"}'>商品分类</div>
+        <el-select v-model="formSearch.chongwufenlei" placeholder="请选择商品分类" :clearable="true">
           <el-option v-for="(item, index) in chongwufenleiOptions" :key="index" :label="item" :value="item"></el-option>
         </el-select>
       </el-form-item>
@@ -34,8 +34,8 @@
 				<img :style='{"cursor":"pointer","padding":"10px","borderColor":"#9dcde9","objectFit":"cover","borderRadius":"0","borderWidth":"6px","display":"inline-block","width":"48%","borderStyle":"dotted","height":"100%"}' v-if="item.chongwutupian && item.chongwutupian.substr(0,4)=='http'" :src="item.chongwutupian" class="image" />
 				<img :style='{"cursor":"pointer","padding":"10px","borderColor":"#9dcde9","objectFit":"cover","borderRadius":"0","borderWidth":"6px","display":"inline-block","width":"48%","borderStyle":"dotted","height":"100%"}' v-else :src="baseUrl + (item.chongwutupian?item.chongwutupian.split(',')[0]:'')" class="image" />
 				<div class="item-info" :style='{"width":"48%","padding":"0px 10px","overflow":"hidden","display":"inline-block","height":"100%"}'>
-					<div :style='{"padding":"0 10px","borderColor":"#9dcde9","margin":"0 0 10px","whiteSpace":"nowrap","overflow":"hidden","color":"#333","background":"none","borderWidth":"0 0 2px","lineHeight":"40px","fontSize":"14px","textOverflow":"ellipsis","borderStyle":"dotted"}' class="name ">宠物名称:{{item.chongwumingcheng}}</div>
-					<div :style='{"padding":"0 10px","borderColor":"#9dcde9","margin":"0 0 10px","whiteSpace":"nowrap","overflow":"hidden","color":"#333","background":"none","borderWidth":"0 0 2px","lineHeight":"40px","fontSize":"14px","textOverflow":"ellipsis","borderStyle":"dotted"}' class="name ">宠物分类:{{item.chongwufenlei}}</div>
+					<div :style='{"padding":"0 10px","borderColor":"#9dcde9","margin":"0 0 10px","whiteSpace":"nowrap","overflow":"hidden","color":"#333","background":"none","borderWidth":"0 0 2px","lineHeight":"40px","fontSize":"14px","textOverflow":"ellipsis","borderStyle":"dotted"}' class="name ">商品名称:{{item.chongwumingcheng}}</div>
+					<div :style='{"padding":"0 10px","borderColor":"#9dcde9","margin":"0 0 10px","whiteSpace":"nowrap","overflow":"hidden","color":"#333","background":"none","borderWidth":"0 0 2px","lineHeight":"40px","fontSize":"14px","textOverflow":"ellipsis","borderStyle":"dotted"}' class="name ">商品分类:{{item.chongwufenlei}}</div>
 					<div v-if="item.price" :style='{"padding":"10px","lineHeight":"24px","fontSize":"14px","color":"#f00","textAlign":"right","display":"block"}' class="price"><span :style='{"fontSize":"12px"}'>￥</span>{{item.price}}</div>
 				</div>
 			</div>
@@ -74,7 +74,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '宠物信息'
+            name: '商品信息'
           }
         ],
         formSearch: {

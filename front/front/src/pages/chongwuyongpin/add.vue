@@ -19,9 +19,9 @@
             <el-input v-model="ruleForm.shangpinleixing" 
                 placeholder="商品类型" clearable ></el-input>
           </el-form-item>
-          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="适用宠物" prop="shiyongchongwu">
+          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="支持售后" prop="shiyongchongwu">
             <el-input v-model="ruleForm.shiyongchongwu" 
-                placeholder="适用宠物" clearable ></el-input>
+                placeholder="支持售后" clearable ></el-input>
           </el-form-item>
           <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="注意事项" prop="zhuyishixiang">
             <el-input v-model="ruleForm.zhuyishixiang" 

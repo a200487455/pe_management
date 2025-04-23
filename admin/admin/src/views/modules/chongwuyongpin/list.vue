@@ -61,7 +61,7 @@
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='false'  
 						prop="shiyongchongwu"
-					label="适用宠物">
+					label="支持售后">
 						<template slot-scope="scope">
 							{{scope.row.shiyongchongwu}}
 						</template>

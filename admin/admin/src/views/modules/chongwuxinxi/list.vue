@@ -5,12 +5,12 @@
 			<el-form class="center-form-pv" :style='{"width":"95%","margin":"40px 0 20px 5%"}' :inline="true" :model="searchForm">
 				<el-row :style='{"display":"block"}' >
 					<div :style='{"margin":"0 20px 0 0","display":"inline-block"}'>
-						<label :style='{"margin":"0 10px 0 0","color":"#000","display":"inline-block","lineHeight":"40px","fontSize":"14px","fontWeight":"500","height":"40px"}' class="item-label">宠物名称</label>
-						<el-input v-model="searchForm.chongwumingcheng" placeholder="宠物名称" clearable></el-input>
+						<label :style='{"margin":"0 10px 0 0","color":"#000","display":"inline-block","lineHeight":"40px","fontSize":"14px","fontWeight":"500","height":"40px"}' class="item-label">商品名称</label>
+						<el-input v-model="searchForm.chongwumingcheng" placeholder="商品名称" clearable></el-input>
 					</div>
-					<div :style='{"margin":"0 20px 0 0","display":"inline-block"}' class="select" label="宠物分类" prop="chongwufenlei">
-						<label :style='{"margin":"0 10px 0 0","color":"#000","display":"inline-block","lineHeight":"40px","fontSize":"14px","fontWeight":"500","height":"40px"}' class="item-label">宠物分类</label>
-						<el-select  @change="chongwufenleiChange" clearable v-model="searchForm.chongwufenlei" placeholder="请选择宠物分类">
+					<div :style='{"margin":"0 20px 0 0","display":"inline-block"}' class="select" label="电子元件分类" prop="chongwufenlei">
+						<label :style='{"margin":"0 10px 0 0","color":"#000","display":"inline-block","lineHeight":"40px","fontSize":"14px","fontWeight":"500","height":"40px"}' class="item-label">电子元件分类</label>
+						<el-select  @change="chongwufenleiChange" clearable v-model="searchForm.chongwufenlei" placeholder="请选择电子元件分类">
 							<el-option v-for="(item,index) in chongwufenleiOptions" v-bind:key="index" :label="item" :value="item"></el-option>
 						</el-select>
 					</div>
@@ -39,19 +39,19 @@
 					<el-table-column :resizable='true' :sortable='false' label="索引" type="index" width="50" />
 					<el-table-column :resizable='true' :sortable='false'  
 						prop="chongwumingcheng"
-					label="宠物名称">
+					label="商品名称">
 						<template slot-scope="scope">
 							{{scope.row.chongwumingcheng}}
 						</template>
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='false'  
 						prop="chongwufenlei"
-					label="宠物分类">
+					label="电子元件分类">
 						<template slot-scope="scope">
 							{{scope.row.chongwufenlei}}
 						</template>
 					</el-table-column>
-					<el-table-column :resizable='true' :sortable='false' prop="chongwutupian" width="200" label="宠物图片">
+					<el-table-column :resizable='true' :sortable='false' prop="chongwutupian" width="200" label="商品图片">
 						<template slot-scope="scope">
 							<div v-if="scope.row.chongwutupian">
 								<img v-if="scope.row.chongwutupian.substring(0,4)=='http'" :src="scope.row.chongwutupian.split(',')[0]" width="100" height="100">
@@ -62,21 +62,21 @@
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='false'  
 						prop="chongwuxingbie"
-					label="宠物性别">
+					label="是否缺货">
 						<template slot-scope="scope">
 							{{scope.row.chongwuxingbie}}
 						</template>
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='false'  
 						prop="jiezhongyimiao"
-					label="接种疫苗">
+					label="支持售后">
 						<template slot-scope="scope">
 							{{scope.row.jiezhongyimiao}}
 						</template>
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='false'  
 						prop="chongwuxingqing"
-					label="宠物性情">
+					label="是否限购">
 						<template slot-scope="scope">
 							{{scope.row.chongwuxingqing}}
 						</template>
@@ -90,7 +90,7 @@
 					</el-table-column>
 					<el-table-column :resizable='true' :sortable='false'  
 						prop="lingyangyaoqiu"
-					label="领养要求">
+					label="起购要求">
 						<template slot-scope="scope">
 							{{scope.row.lingyangyaoqiu}}
 						</template>

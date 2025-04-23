@@ -6,15 +6,15 @@ export default {
             url: '/index/home'
         },
         {
-            name: '宠物信息',
+            name: '批量采购商品信息',
             url: '/index/chongwuxinxi'
         },
         {
-            name: '宠物用品',
+            name: '直售商品信息',
             url: '/index/chongwuyongpin'
         },
         {
-            name: '宠物资讯',
+            name: '公司快讯',
             url: '/index/news'
         },
         // {

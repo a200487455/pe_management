@@ -7,17 +7,17 @@
       :rules="rules"
       label-width="80px"
     >
-          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="宠物名称" prop="chongwumingcheng">
+          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="商品名称" prop="chongwumingcheng">
             <el-input v-model="ruleForm.chongwumingcheng" 
-                placeholder="宠物名称" clearable ></el-input>
+                placeholder="商品名称" clearable ></el-input>
           </el-form-item>
-          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="宠物分类" prop="chongwufenlei">
+          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="商品分类" prop="chongwufenlei">
             <el-input v-model="ruleForm.chongwufenlei" 
-                placeholder="宠物分类" clearable ></el-input>
+                placeholder="商品分类" clearable ></el-input>
           </el-form-item>
-          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="宠物图片" v-if="type!='cross' || (type=='cross' && !ro.chongwutupian)" prop="chongwutupian">
+          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="商品图片" v-if="type!='cross' || (type=='cross' && !ro.chongwutupian)" prop="chongwutupian">
             <file-upload
-            tip="点击上传宠物图片"
+            tip="点击上传商品图片"
             action="file/upload"
             :limit="3"
             :multiple="true"
@@ -25,17 +25,17 @@
             @change="chongwutupianUploadChange"
             ></file-upload>
           </el-form-item>
-            <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' class="upload" v-else label="宠物图片" prop="chongwutupian">
+            <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' class="upload" v-else label="商品图片" prop="chongwutupian">
                 <img v-if="ruleForm.chongwutupian.substring(0,4)=='http'" class="upload-img" style="margin-right:20px;" v-bind:key="index" :src="ruleForm.chongwutupian.split(',')[0]" width="100" height="100">
                 <img v-else class="upload-img" style="margin-right:20px;" v-bind:key="index" v-for="(item,index) in ruleForm.chongwutupian.split(',')" :src="baseUrl+item" width="100" height="100">
             </el-form-item>
-          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="宠物性别" prop="chongwuxingbie">
+          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="是否缺货" prop="chongwuxingbie">
             <el-input v-model="ruleForm.chongwuxingbie" 
-                placeholder="宠物性别" clearable ></el-input>
+                placeholder="是否缺货" clearable ></el-input>
           </el-form-item>
-          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="接种疫苗" prop="jiezhongyimiao">
+          <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="支持售后" prop="jiezhongyimiao">
             <el-input v-model="ruleForm.jiezhongyimiao" 
-                placeholder="接种疫苗" clearable ></el-input>
+                placeholder="支持售后" clearable ></el-input>
           </el-form-item>
           <!-- <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="宠物性情" prop="chongwuxingqing">
             <el-input v-model="ruleForm.chongwuxingqing" 
@@ -53,9 +53,9 @@
             <el-input v-model="ruleForm.faburiqi" 
                 placeholder="发布日期" clearable ></el-input>
           </el-form-item>
-          <!-- <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="领养申请" prop="lingyangshenqing">
+          <!-- <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="采购申请" prop="lingyangshenqing">
             <el-input v-model="ruleForm.lingyangshenqing" 
-                placeholder="领养申请" clearable ></el-input>
+                placeholder="采购申请" clearable ></el-input>
           </el-form-item> -->
           <!-- <el-form-item :style='{"border":"0px solid #dfdfdf","padding":"10px","boxShadow":"0px 0px 0px #eee","margin":"0 0 8px 0","borderRadius":"8px","background":"none"}' label="申请备注" prop="shenqingbeizhu">
             <el-input v-model="ruleForm.shenqingbeizhu" 

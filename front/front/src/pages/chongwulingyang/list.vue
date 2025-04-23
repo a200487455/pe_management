@@ -12,12 +12,12 @@
 	
     <el-form :inline="true" :model="formSearch" class="list-form-pv" :style='{"padding":"20px 10px","margin":"0px auto 0","borderColor":"#00adb5","alignItems":"center","display":"flex","borderRadius":"0px","flexWrap":"wrap","background":"#f5f5f5","borderWidth":"0px 0 0px 0","width":"100%","borderStyle":"dashed","height":"auto","order":"2"}'>
       <el-form-item :style='{"alignItems":"center","margin":"0 4px 0 0","display":"flex"}'>
-	    <div class="lable" v-if="true" :style='{"width":"auto","padding":"0 10px","lineHeight":"42px","display":"inline-block"}'>宠物名称</div>
-        <el-input v-model="formSearch.chongwumingcheng" placeholder="宠物名称" clearable></el-input>
+	    <div class="lable" v-if="true" :style='{"width":"auto","padding":"0 10px","lineHeight":"42px","display":"inline-block"}'>商品名称</div>
+        <el-input v-model="formSearch.chongwumingcheng" placeholder="商品名称" clearable></el-input>
       </el-form-item>
       <el-form-item :style='{"alignItems":"center","margin":"0 4px 0 0","display":"flex"}'>
-	    <div class="lable" v-if="true" :style='{"width":"auto","padding":"0 10px","lineHeight":"42px","display":"inline-block"}'>宠物分类</div>
-        <el-input v-model="formSearch.chongwufenlei" placeholder="宠物分类" clearable></el-input>
+	    <div class="lable" v-if="true" :style='{"width":"auto","padding":"0 10px","lineHeight":"42px","display":"inline-block"}'>商品分类</div>
+        <el-input v-model="formSearch.chongwufenlei" placeholder="商品分类" clearable></el-input>
       </el-form-item>
 	  <el-button v-if=" true " :style='{"cursor":"pointer","border":"0px solid #fcbc45","padding":"0px 15px","boxShadow":"0px 0px 0px #ccc","margin":"0px 10px 0 0","color":"#fff","outline":"none","borderRadius":"4px","background":"linear-gradient(320deg, rgba(48,134,185,1) 0%, rgba(197,230,250,1) 80%, rgba(48,134,185,1) 100%),#3086b9","width":"auto","fontSize":"14px","lineHeight":"40px","height":"40px"}' type="primary" @click="getList(1, curFenlei)"><i v-if="true" :style='{"color":"#fff","margin":"0 10px 0 0","fontSize":"14px"}' class="el-icon-search"></i>查询</el-button>
 	  <el-button v-if="isAuth('chongwulingyang','新增')" :style='{"cursor":"pointer","border":"0px solid #db961f","padding":"0px 15px","boxShadow":"0px 0px 0px #f8a412","margin":"0px 10px 0 0","color":"#fff","outline":"none","borderRadius":"4px","background":"linear-gradient(320deg, rgba(61,199,196,1) 0%, rgba(152,247,245,1) 80%, rgba(61,199,196,1) 100%),rgb(61,199,196)","width":"auto","fontSize":"14px","lineHeight":"40px","height":"40px"}' type="primary" @click="add('/index/chongwulingyangAdd')"><i v-if="true" :style='{"color":"#fff","margin":"0 10px 0 0","fontSize":"14px"}' class="el-icon-circle-plus-outline"></i>添加</el-button>
@@ -68,7 +68,7 @@
         baseUrl: '',
         breadcrumbItem: [
           {
-            name: '宠物领养'
+            name: '起购申请'
           }
         ],
         formSearch: {
