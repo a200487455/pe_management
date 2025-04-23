@@ -9,11 +9,11 @@
 			label-width="120px"
 		>
 			<template >
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="宠物类型" prop="chongwuleixing">
-					<el-input v-model="ruleForm.chongwuleixing" placeholder="宠物类型" clearable  :readonly="ro.chongwuleixing"></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' class="input" v-if="type!='info'"  label="电子元件类型" prop="chongwuleixing">
+					<el-input v-model="ruleForm.chongwuleixing" placeholder="电子元件类型" clearable  :readonly="ro.chongwuleixing"></el-input>
 				</el-form-item>
-				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="宠物类型" prop="chongwuleixing">
-					<el-input v-model="ruleForm.chongwuleixing" placeholder="宠物类型" readonly></el-input>
+				<el-form-item :style='{"width":"48%","margin":"0 0.5% 20px","display":"inline-block"}' v-else class="input" label="电子元件类型" prop="chongwuleixing">
+					<el-input v-model="ruleForm.chongwuleixing" placeholder="电子元件类型" readonly></el-input>
 				</el-form-item>
 			</template>
 			<el-form-item :style='{"padding":"0","margin":"0"}' class="btn">

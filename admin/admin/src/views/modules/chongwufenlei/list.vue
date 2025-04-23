@@ -5,8 +5,8 @@
 			<el-form class="center-form-pv" :style='{"width":"95%","margin":"40px 0 20px 5%"}' :inline="true" :model="searchForm">
 				<el-row :style='{"display":"block"}' >
 					<div :style='{"margin":"0 20px 0 0","display":"inline-block"}'>
-						<label :style='{"margin":"0 10px 0 0","color":"#000","display":"inline-block","lineHeight":"40px","fontSize":"14px","fontWeight":"500","height":"40px"}' class="item-label">宠物类型</label>
-						<el-input v-model="searchForm.chongwuleixing" placeholder="宠物类型" clearable></el-input>
+						<label :style='{"margin":"0 10px 0 0","color":"#000","display":"inline-block","lineHeight":"40px","fontSize":"14px","fontWeight":"500","height":"40px"}' class="item-label">电子元件类型</label>
+						<el-input v-model="searchForm.chongwuleixing" placeholder="电子元件类型" clearable></el-input>
 					</div>
 					<el-button :style='{"border":"0","cursor":"pointer","padding":"0 24px","outline":"none","color":"#333","borderRadius":"4px","background":"linear-gradient(180deg, #DDE2FC 0%, #FCF6E5 100%)","width":"auto","fontSize":"14px","height":"40px"}' type="success" @click="search()">查询</el-button>
 				</el-row>
@@ -33,7 +33,7 @@
 					<el-table-column :resizable='true' :sortable='false' label="索引" type="index" width="50" />
 					<el-table-column :resizable='true' :sortable='false'  
 						prop="chongwuleixing"
-					label="宠物类型">
+					label="电子元件类型">
 						<template slot-scope="scope">
 							{{scope.row.chongwuleixing}}
 						</template>

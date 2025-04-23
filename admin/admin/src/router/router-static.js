@@ -51,17 +51,17 @@ const routes = [{
     }
       ,{
 	path: '/chongwuxinxi',
-        name: '宠物信息',
+        name: '批量采购商品信息',
         component: chongwuxinxi
       }
       ,{
 	path: '/news',
-        name: '宠物资讯',
+        name: '公告推送',
         component: news
       }
       ,{
 	path: '/chongwulingyang',
-        name: '宠物领养',
+        name: '批发商品信息',
         component: chongwulingyang
       }
       ,{
@@ -86,12 +86,12 @@ const routes = [{
       }
       ,{
 	path: '/chongwuyongpin',
-        name: '宠物用品',
+        name: '直售商品信息',
         component: chongwuyongpin
       }
       ,{
 	path: '/chongwufenlei',
-        name: '宠物分类',
+        name: '电子元件分类',
         component: chongwufenlei
       }
     ]
